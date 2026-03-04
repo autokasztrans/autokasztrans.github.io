@@ -5,9 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Auto Pomoc – Laweta Poznań | Pomoc drogowa 24/7</title>
   <meta name="description" content="Auto pomoc, holowanie, transport, skup i kasacja pojazdów w Poznaniu. Czynne całą dobę. Tel: 784 311 112" />
-
-  <!-- Google Fonts -->
   //fonts.googleapis.com" />
+  //fonts.gstatic.com" crossorigin />
   //fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet" />
 
   <style>
@@ -22,229 +21,15 @@
       --radius: 12px;
     }
 
+    html { scroll-behavior: smooth; }
+
     body {
       font-family: 'Inter', sans-serif;
       background: var(--dark);
       color: var(--white);
-      scroll-behavior: smooth;
     }
 
-    /* ── HERO ── */
-    .hero {
-      position: relative;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 2rem 1.5rem 4rem;
-      overflow: hidden;
-    }
-
-    .hero-bg {
-      position: absolute;
-      inset: 0;
-      background:
-        linear-gradient(to bottom, rgba(0,0,0,.65) 0%, rgba(0,0,0,.85) 100%),
-        url('https://scontent.fpoznan5-1.fna.fbcdn.net/v/t39.30808-6/484301573700456_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=&_nc_zt=23&_nc_ht=scontent.fpoznan5-1.fna.fbcdn.net&oh=&oe=') center/cover no-repeat;
-      /* Fallback gradient gdy FB zablokuje zdjęcie */
-      background-color: #1a1a2e;
-    }
-
-    /* żółty pasek jak na lawecie */
-    .hero::after {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 0; right: 0;
-      height: 6px;
-      background: var(--yellow);
-    }
-
-    .hero-content { position: relative; z-index: 1; max-width: 700px; }
-
-    .badge {
-      display: inline-block;
-      background: var(--yellow);
-      color: var(--dark);
-      font-size: .75rem;
-      font-weight: 700;
-      letter-spacing: .12em;
-      text-transform: uppercase;
-      padding: .35rem .9rem;
-      border-radius: 999px;
-      margin-bottom: 1.25rem;
-    }
-
-    .hero h1 {
-      font-size: clamp(2rem, 6vw, 3.8rem);
-      font-weight: 900;
-      line-height: 1.1;
-      margin-bottom: .75rem;
-    }
-
-    .hero h1 span { color: var(--yellow); }
-
-    .hero p {
-      font-size: 1.1rem;
-      color: #d1d5db;
-      max-width: 520px;
-      margin: 0 auto 2rem;
-      line-height: 1.6;
-    }
-
-    .hero-cta {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
-      justify-content: center;
-    }
-
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      gap: .5rem;
-      padding: .85rem 2rem;
-      border-radius: var(--radius);
-      font-weight: 700;
-      font-size: 1rem;
-      text-decoration: none;
-      transition: transform .2s, box-shadow .2s;
-    }
-    .btn:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,.4); }
-
-    .btn-primary { background: var(--yellow); color: var(--dark); }
-    .btn-outline  { border: 2px solid var(--white); color: var(--white); }
-
-    /* ── USŁUGI ── */
-    .section { padding: 5rem 1.5rem; max-width: 1100px; margin: 0 auto; }
-
-    .section-title {
-      text-align: center;
-      font-size: clamp(1.6rem, 4vw, 2.4rem);
-      font-weight: 800;
-      margin-bottom: .5rem;
-    }
-    .section-title span { color: var(--yellow); }
-    .section-sub {
-      text-align: center;
-      color: #9ca3af;
-      margin-bottom: 3rem;
-      font-size: 1rem;
-    }
-
-    .services-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 1.5rem;
-    }
-
-    .card {
-      background: #1f2937;
-      border: 1px solid #374151;
-      border-radius: var(--radius);
-      padding: 2rem 1.5rem;
-      text-align: center;
-      transition: border-color .2s, transform .2s;
-    }
-    .card:hover { border-color: var(--yellow); transform: translateY(-4px); }
-
-    .card-icon {
-      font-size: 2.5rem;
-      margin-bottom: 1rem;
-      display: block;
-    }
-
-    .card h3 { font-size: 1.1rem; font-weight: 700; margin-bottom: .5rem; }
-    .card p  { font-size: .9rem; color: #9ca3af; line-height: 1.5; }
-
-    /* ── GALERIA ── */
-    .gallery-section { background: #111827; padding: 5rem 1.5rem; }
-    .gallery-inner   { max-width: 1100px; margin: 0 auto; }
-
-    .gallery-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-      gap: 1rem;
-      margin-top: 2rem;
-    }
-
-    .gallery-item {
-      position: relative;
-      border-radius: var(--radius);
-      overflow: hidden;
-      aspect-ratio: 4/3;
-      background: #1f2937;
-    }
-
-    .gallery-item img {
-      width: 100%; height: 100%;
-      object-fit: cover;
-      transition: transform .4s;
-    }
-    .gallery-item:hover img { transform: scale(1.06); }
-
-    /* ── KONTAKT ── */
-    .contact-section { padding: 5rem 1.5rem; }
-    .contact-inner   { max-width: 900px; margin: 0 auto; }
-
-    .contact-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 1.5rem;
-      margin-top: 2rem;
-    }
-
-    .contact-card {
-      background: #1f2937;
-      border: 1px solid #374151;
-      border-radius: var(--radius);
-      padding: 1.75rem 1.5rem;
-      display: flex;
-      align-items: flex-start;
-      gap: 1rem;
-    }
-
-    .contact-icon {
-      font-size: 1.8rem;
-      flex-shrink: 0;
-      width: 48px; height: 48px;
-      background: var(--yellow);
-      border-radius: 10px;
-      display: flex; align-items: center; justify-content: center;
-      font-style: normal;
-    }
-
-    .contact-card h4 { font-size: .8rem; color: #9ca3af; text-transform: uppercase; letter-spacing: .08em; margin-bottom: .3rem; }
-    .contact-card a, .contact-card p {
-      font-size: 1rem; font-weight: 600;
-      color: var(--white);
-      text-decoration: none;
-    }
-    .contact-card a:hover { color: var(--yellow); }
-
-    /* ── MAPA ── */
-    .map-wrap {
-      margin-top: 3rem;
-      border-radius: var(--radius);
-      overflow: hidden;
-      border: 2px solid #374151;
-    }
-    .map-wrap iframe { display: block; width: 100%; height: 320px; border: none; }
-
-    /* ── FOOTER ── */
-    footer {
-      background: #0d1117;
-      border-top: 4px solid var(--yellow);
-      text-align: center;
-      padding: 2rem 1.5rem;
-      color: #6b7280;
-      font-size: .85rem;
-    }
-    footer a { color: var(--yellow); text-decoration: none; }
-
-    /* ── TOPBAR 24/7 ── */
+    /* ── TOPBAR ── */
     .topbar {
       background: var(--yellow);
       color: var(--dark);
@@ -252,7 +37,7 @@
       padding: .5rem 1rem;
       font-weight: 700;
       font-size: .9rem;
-      letter-spacing: .05em;
+      letter-spacing: .04em;
     }
     .topbar a { color: var(--dark); text-decoration: none; font-weight: 900; }
 
@@ -265,36 +50,194 @@
       display: flex; align-items: center; justify-content: space-between;
       padding: .8rem 2rem;
     }
+    .nav-logo { font-size: 1.1rem; font-weight: 900; color: var(--white); text-decoration: none; }
+    .nav-logo span { color: var(--yellow); }
+    .nav-links { display: flex; gap: 1.5rem; list-style: none; }
+    .nav-links a { color: #d1d5db; text-decoration: none; font-weight: 600; font-size: .9rem; transition: color .2s; }
+    .nav-links a:hover { color: var(--yellow); }
+    @media (max-width: 600px) { .nav-links { display: none; } }
 
-    .nav-logo {
-      font-size: 1.1rem; font-weight: 900;
+    /* ── HERO ── */
+    .hero {
+      position: relative;
+      min-height: 100vh;
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
+      text-align: center;
+      padding: 2rem 1.5rem 5rem;
+      overflow: hidden;
+    }
+    .hero-bg {
+      position: absolute; inset: 0;
+      background:
+        linear-gradient(to bottom, rgba(0,0,0,.6) 0%, rgba(0,0,0,.88) 100%),
+        url('https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Tow_truck_transporting_a_car.jpg/1280px-Tow_truck_transporting_a_car.jpg')
+        center/cover no-repeat;
+    }
+    .hero::after {
+      content: '';
+      position: absolute; bottom: 0; left: 0; right: 0;
+      height: 6px; background: var(--yellow);
+    }
+    .hero-content { position: relative; z-index: 1; max-width: 700px; }
+
+    .badge {
+      display: inline-block;
+      background: var(--yellow); color: var(--dark);
+      font-size: .75rem; font-weight: 700;
+      letter-spacing: .12em; text-transform: uppercase;
+      padding: .35rem .9rem; border-radius: 999px;
+      margin-bottom: 1.25rem;
+    }
+    .hero h1 {
+      font-size: clamp(2rem, 6vw, 3.8rem);
+      font-weight: 900; line-height: 1.1;
+      margin-bottom: .75rem;
+    }
+    .hero h1 span { color: var(--yellow); }
+    .hero p {
+      font-size: 1.1rem; color: #d1d5db;
+      max-width: 520px; margin: 0 auto 2rem; line-height: 1.6;
+    }
+    .hero-cta { display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; }
+
+    .btn {
+      display: inline-flex; align-items: center; gap: .5rem;
+      padding: .85rem 2rem; border-radius: var(--radius);
+      font-weight: 700; font-size: 1rem; text-decoration: none;
+      transition: transform .2s, box-shadow .2s;
+    }
+    .btn:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,.4); }
+    .btn-primary { background: var(--yellow); color: var(--dark); }
+    .btn-outline  { border: 2px solid var(--white); color: var(--white); }
+
+    /* ── SECTIONS ── */
+    .section { padding: 5rem 1.5rem; max-width: 1100px; margin: 0 auto; }
+    .section-title {
+      text-align: center;
+      font-size: clamp(1.6rem, 4vw, 2.4rem);
+      font-weight: 800; margin-bottom: .5rem;
+    }
+    .section-title span { color: var(--yellow); }
+    .section-sub { text-align: center; color: #9ca3af; margin-bottom: 3rem; font-size: 1rem; }
+
+    /* ── USŁUGI ── */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.5rem;
+    }
+    .card {
+      background: #1f2937; border: 1px solid #374151;
+      border-radius: var(--radius); padding: 2rem 1.5rem;
+      text-align: center; transition: border-color .2s, transform .2s;
+    }
+    .card:hover { border-color: var(--yellow); transform: translateY(-4px); }
+    .card-icon { font-size: 2.5rem; margin-bottom: 1rem; display: block; }
+    .card h3 { font-size: 1.05rem; font-weight: 700; margin-bottom: .5rem; }
+    .card p  { font-size: .88rem; color: #9ca3af; line-height: 1.5; }
+
+    /* ── GALERIA ── */
+    .gallery-section { background: #0d1117; padding: 5rem 1.5rem; }
+    .gallery-inner { max-width: 1100px; margin: 0 auto; }
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 1rem; margin-top: 2rem;
+    }
+    .gallery-item {
+      position: relative; border-radius: var(--radius);
+      overflow: hidden; aspect-ratio: 4/3;
+      background: #1f2937;
+    }
+    .gallery-item img {
+      width: 100%; height: 100%; object-fit: cover;
+      transition: transform .4s;
+    }
+    .gallery-item:hover img { transform: scale(1.06); }
+    .gallery-item .overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(to top, rgba(0,0,0,.6), transparent);
+      opacity: 0; transition: opacity .3s;
+      display: flex; align-items: flex-end;
+      padding: 1rem;
+    }
+    .gallery-item:hover .overlay { opacity: 1; }
+    .overlay span { font-size: .85rem; font-weight: 600; color: var(--white); }
+
+    /* ── KONTAKT ── */
+    .contact-section { padding: 5rem 1.5rem; }
+    .contact-inner { max-width: 960px; margin: 0 auto; }
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.25rem; margin-top: 2rem;
+    }
+    .contact-card {
+      background: #1f2937; border: 1px solid #374151;
+      border-radius: var(--radius); padding: 1.5rem;
+      display: flex; align-items: flex-start; gap: 1rem;
+    }
+    .contact-icon {
+      font-size: 1.4rem; flex-shrink: 0;
+      width: 46px; height: 46px;
+      background: var(--yellow); border-radius: 10px;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .contact-info h4 {
+      font-size: .75rem; color: #9ca3af;
+      text-transform: uppercase; letter-spacing: .08em;
+      margin-bottom: .3rem;
+    }
+    .contact-info a,
+    .contact-info p {
+      font-size: .95rem; font-weight: 600;
       color: var(--white); text-decoration: none;
     }
-    .nav-logo span { color: var(--yellow); }
+    .contact-info a:hover { color: var(--yellow); }
 
-    .nav-links { display: flex; gap: 1.5rem; list-style: none; }
-    .nav-links a {
-      color: #d1d5db; text-decoration: none;
-      font-weight: 600; font-size: .9rem;
-      transition: color .2s;
+    /* ── MAPA ── */
+    .map-wrap {
+      margin-top: 2.5rem; border-radius: var(--radius);
+      overflow: hidden; border: 2px solid #374151;
     }
-    .nav-links a:hover { color: var(--yellow); }
+    .map-wrap iframe { display: block; width: 100%; height: 340px; border: none; }
 
-    @media (max-width: 600px) {
-      .nav-links { display: none; }
+    /* ── FACEBOOK CTA ── */
+    .fb-cta {
+      background: #1877f2; border-radius: var(--radius);
+      padding: 1.5rem 2rem; margin-top: 2rem;
+      display: flex; align-items: center; justify-content: space-between;
+      flex-wrap: wrap; gap: 1rem;
     }
+    .fb-cta p { font-weight: 600; font-size: 1rem; }
+    .fb-cta a {
+      background: white; color: #1877f2;
+      font-weight: 700; font-size: .9rem;
+      padding: .6rem 1.4rem; border-radius: 8px;
+      text-decoration: none; transition: opacity .2s;
+    }
+    .fb-cta a:hover { opacity: .88; }
+
+    /* ── FOOTER ── */
+    footer {
+      background: #0d1117; border-top: 4px solid var(--yellow);
+      text-align: center; padding: 2rem 1.5rem;
+      color: #6b7280; font-size: .85rem;
+    }
+    footer a { color: var(--yellow); text-decoration: none; }
   </style>
 </head>
 <body>
 
-  <!-- Pasek alarmu -->
+  <!-- Topbar -->
   <div class="topbar">
     🚨 Pomoc drogowa 24/7 — Zadzwoń teraz: <a href="tel:784311112">784 311 112</a>
   </div>
 
-  <!-- Nawigacja -->
+  <!-- Nav -->
   <nav>
-    <a href="#" class="nav-logo">Auto<span>Pomoc</span></a>
+    <a href="#top" class="nav-logo">Auto<span>Pomoc</span> Laweta</a>
     <ul class="nav-links">
       ><a href="#uslugi">Usługi</a></li>
       ><a href="#galeria">Galeria</a></li>
@@ -303,44 +246,48 @@
   </nav>
 
   <!-- HERO -->
-  <section class="hero">
+  <section class="hero" id="top">
     <div class="hero-bg"></div>
     <div class="hero-content">
       <span class="badge">🚗 Pomoc Drogowa · Poznań</span>
-      <h1>Auto Pomoc<br /><span>Laweta Poznań</span></h1>
+      <h1>Auto Pomoc<br><span>Laweta Poznań</span></h1>
       <p>Holowanie, transport, skup i kasacja pojazdów. Działamy <strong>całą dobę, 7 dni w tygodniu</strong>. Konkurencyjne ceny.</p>
       <div class="hero-cta">
         <a href="tel:784311112" class="btn btn-primary">📞 784 311 112</a>
-        <a href="#uslugi" class="btn btn-outline">Zobacz usługi</a>
+        <a href="#uslugi" class="btn btn-outline">Zobacz usługi ↓</a>
       </div>
     </div>
   </section>
 
   <!-- USŁUGI -->
-  <section class="section" id="uslugi">
-    <h2 class="section-title">Nasze <span>Usługi</span></h2>
-    <p class="section-sub">Kompleksowa pomoc drogowa na terenie Poznania i okolic</p>
-    <div class="services-grid">
-      <div class="card">
-        <span class="card-icon">🚛</span>
-        <h3>Holowanie</h3>
-        <p>Szybkie holowanie pojazdów osobowych i dostawczych w każdej sytuacji.</p>
-      </div>
-      <div class="card">
-        <span class="card-icon">🚚</span>
-        <h3>Transport pojazdów</h3>
-        <p>Bezpieczny transport na lawecie – lokalny i dalekobieżny.</p>
-      </div>
-      <div class="card">
-        <span class="card-icon">💰</span>
-        <h3>Skup pojazdów</h3>
-        <p>Skup aut wszystkich marek – sprawnych i niesprawnych. Uczciwa wycena.</p>
-      </div>
-      <div class="card">
-        <span class="card-icon">♻️</span>
-        <h3>Kasacja pojazdów</h3>
-        <p>Profesjonalna kasacja z wyrejestrowaniem. Odbiór z miejsca parkowania.</p>
-      </div>
-      <div class="card">
-        <span class="card-icon">🛣️</span>
-        <h3>Pomoc drog
+  <section id="uslugi">
+    <div class="section">
+      <h2 class="section-title">Nasze <span>Usługi</span></h2>
+      <p class="section-sub">Kompleksowa pomoc drogowa na terenie Poznania i okolic</p>
+      <div class="services-grid">
+
+        <div class="card">
+          <span class="card-icon">🚛</span>
+          <h3>Holowanie</h3>
+          <p>Szybkie holowanie pojazdów osobowych i dostawczych w każdej sytuacji drogowej.</p>
+        </div>
+
+        <div class="card">
+          <span class="card-icon">🚚</span>
+          <h3>Transport pojazdów</h3>
+          <p>Bezpieczny transport na lawecie – lokalny i dalekobieżny na terenie całej Polski.</p>
+        </div>
+
+        <div class="card">
+          <span class="card-icon">💰</span>
+          <h3>Skup pojazdów</h3>
+          <p>Skup aut wszystkich marek – sprawnych i niesprawnych. Uczciwa wycena od ręki.</p>
+        </div>
+
+        <div class="card">
+          <span class="card-icon">♻️</span>
+          <h3>Kasacja pojazdów</h3>
+          <p>Profesjonalna kasacja z wyrejestrowaniem i odbiorem z miejsca postoju.</p>
+        </div>
+
+        <div class
