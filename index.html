@@ -11,11 +11,9 @@
 html{scroll-behavior:smooth}
 body{font-family:Arial,sans-serif;background:var(--dark);color:var(--white)}
 
-/* TOPBAR */
 .topbar{background:var(--yellow);color:#111;text-align:center;padding:.5rem 1rem;font-weight:700;font-size:.9rem}
 .topbar a{color:#111;text-decoration:none;font-weight:900}
 
-/* NAV */
 nav{position:sticky;top:0;z-index:100;background:rgba(17,24,39,.97);border-bottom:1px solid #374151;display:flex;align-items:center;justify-content:space-between;padding:.8rem 2rem}
 .nav-logo{font-size:1.1rem;font-weight:900;color:var(--white);text-decoration:none}
 .nav-logo span{color:var(--yellow)}
@@ -24,7 +22,6 @@ nav{position:sticky;top:0;z-index:100;background:rgba(17,24,39,.97);border-botto
 .nav-links a:hover{color:var(--yellow)}
 @media(max-width:600px){.nav-links{display:none}}
 
-/* HERO */
 .hero{position:relative;min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:2rem 1.5rem 5rem;overflow:hidden}
 .hero-bg{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(0,0,0,.6),rgba(0,0,0,.88)),url('https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Tow_truck_transporting_a_car.jpg/1280px-Tow_truck_transporting_a_car.jpg') center/cover no-repeat;background-color:#1a1a2e}
 .hero::after{content:'';position:absolute;bottom:0;left:0;right:0;height:6px;background:var(--yellow)}
@@ -39,14 +36,12 @@ nav{position:sticky;top:0;z-index:100;background:rgba(17,24,39,.97);border-botto
 .btn-primary{background:var(--yellow);color:#111}
 .btn-outline{border:2px solid var(--white);color:var(--white)}
 
-/* SECTION */
 .section{padding:5rem 1.5rem;max-width:1100px;margin:0 auto}
 .section-bg{background:#0d1117}
 .section-title{text-align:center;font-size:clamp(1.6rem,4vw,2.4rem);font-weight:800;margin-bottom:.5rem}
 .section-title span{color:var(--yellow)}
 .section-sub{text-align:center;color:#9ca3af;margin-bottom:3rem;font-size:1rem}
 
-/* KARTY USŁUG */
 .services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1.5rem}
 .card{background:#1f2937;border:1px solid #374151;border-radius:var(--radius);padding:2rem 1.5rem;text-align:center;transition:border-color .2s,transform .2s}
 .card:hover{border-color:var(--yellow);transform:translateY(-4px)}
@@ -54,7 +49,6 @@ nav{position:sticky;top:0;z-index:100;background:rgba(17,24,39,.97);border-botto
 .card h3{font-size:1.05rem;font-weight:700;margin-bottom:.5rem}
 .card p{font-size:.88rem;color:#9ca3af;line-height:1.5}
 
-/* GALERIA */
 .gallery-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1rem;margin-top:2rem}
 .gallery-item{border-radius:var(--radius);overflow:hidden;aspect-ratio:4/3;background:#1f2937;position:relative}
 .gallery-item img{width:100%;height:100%;object-fit:cover;transition:transform .4s;display:block}
@@ -62,7 +56,6 @@ nav{position:sticky;top:0;z-index:100;background:rgba(17,24,39,.97);border-botto
 .gallery-caption{position:absolute;bottom:0;left:0;right:0;background:linear-gradient(to top,rgba(0,0,0,.7),transparent);padding:.75rem 1rem;font-size:.85rem;font-weight:600;opacity:0;transition:opacity .3s}
 .gallery-item:hover .gallery-caption{opacity:1}
 
-/* KONTAKT */
 .contact-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1.25rem;margin-top:2rem}
 .contact-card{background:#1f2937;border:1px solid #374151;border-radius:var(--radius);padding:1.5rem;display:flex;align-items:flex-start;gap:1rem}
 .contact-icon{font-size:1.4rem;flex-shrink:0;width:46px;height:46px;background:var(--yellow);border-radius:10px;display:flex;align-items:center;justify-content:center}
@@ -70,38 +63,32 @@ nav{position:sticky;top:0;z-index:100;background:rgba(17,24,39,.97);border-botto
 .contact-info a,.contact-info p{font-size:.95rem;font-weight:600;color:var(--white);text-decoration:none}
 .contact-info a:hover{color:var(--yellow)}
 
-/* MAPA */
 .map-wrap{margin-top:2.5rem;border-radius:var(--radius);overflow:hidden;border:2px solid #374151}
 .map-wrap iframe{display:block;width:100%;height:340px;border:none}
 
-/* FB */
 .fb-box{background:#1877f2;border-radius:var(--radius);padding:1.5rem 2rem;margin-top:2rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem}
 .fb-box p{font-weight:600}
 .fb-box a{background:#fff;color:#1877f2;font-weight:700;font-size:.9rem;padding:.6rem 1.4rem;border-radius:8px;text-decoration:none}
 
-/* FOOTER */
 footer{background:#0d1117;border-top:4px solid var(--yellow);text-align:center;padding:2rem 1.5rem;color:#6b7280;font-size:.85rem}
 footer a{color:var(--yellow);text-decoration:none}
 </style>
 </head>
 <body>
 
-<!-- TOPBAR -->
 <div class="topbar">
   🚨 Pomoc drogowa 24/7 — Zadzwoń teraz: <a href="tel:784311112">784 311 112</a>
 </div>
 
-<!-- NAV -->
 <nav>
   <a href="#top" class="nav-logo">Auto<span>Pomoc</span> Laweta</a>
   <ul class="nav-links">
-    ><a href="#uslugi">Usługi</a></li>
-    ><a href="#galeria">Galeria</a></li>
-    ><a href="#kontakt">Kontakt</a></li>
+    <li><a href="#uslugi">Usługi</a></li>
+    <li><a href="#galeria">Galeria</a></li>
+    <li><a href="#kontakt">Kontakt</a></li>
   </ul>
 </nav>
 
-<!-- HERO -->
 <section class="hero" id="top">
   <div class="hero-bg"></div>
   <div class="hero-content">
@@ -115,71 +102,58 @@ footer a{color:var(--yellow);text-decoration:none}
   </div>
 </section>
 
-<!-- USŁUGI -->
 <section id="uslugi">
   <div class="section">
     <h2 class="section-title">Nasze <span>Usługi</span></h2>
     <p class="section-sub">Kompleksowa pomoc drogowa na terenie Poznania i okolic</p>
     <div class="services-grid">
-      <div class="card">
-        <span class="card-icon">🚛</span>
-        <h3>Holowanie</h3>
-        <p>Szybkie holowanie pojazdów osobowych i dostawczych w każdej sytuacji drogowej.</p>
-      </div>
-      <div class="card">
-        <span class="card-icon">🚚</span>
-        <h3>Transport pojazdów</h3>
-        <p>Bezpieczny transport na lawecie – lokalny i dalekobieżny na terenie całej Polski.</p>
-      </div>
-      <div class="card">
-        <span class="card-icon">💰</span>
-        <h3>Skup pojazdów</h3>
-        <p>Skup aut wszystkich marek – sprawnych i niesprawnych. Uczciwa wycena od ręki.</p>
-      </div>
-      <div class="card">
-        <span class="card-icon">♻️</span>
-        <h3>Kasacja pojazdów</h3>
-        <p>Profesjonalna kasacja z wyrejestrowaniem i odbiorem z miejsca postoju.</p>
-      </div>
-      <div class="card">
-        <span class="card-icon">🛣️</span>
-        <h3>Pomoc drogowa</h3>
-        <p>Interwencja na miejscu awarii – szybko, sprawnie, w konkurencyjnej cenie.</p>
-      </div>
-      <div class="card">
-        <span class="card-icon">🕐</span>
-        <h3>Dostępni 24/7</h3>
-        <p>Działamy całą dobę, przez cały rok – również w święta i weekendy.</p>
-      </div>
+      <div class="card"><span class="card-icon">🚛</span><h3>Holowanie</h3><p>Szybkie holowanie pojazdów osobowych i dostawczych.</p></div>
+      <div class="card"><span class="card-icon">🚚</span><h3>Transport</h3><p>Bezpieczny transport na lawecie – lokalny i dalekobieżny.</p></div>
+      <div class="card"><span class="card-icon">💰</span><h3>Skup aut</h3><p>Skup aut wszystkich marek – sprawnych i niesprawnych.</p></div>
+      <div class="card"><span class="card-icon">♻️</span><h3>Kasacja</h3><p>Profesjonalna kasacja z wyrejestrowaniem.</p></div>
+      <div class="card"><span class="card-icon">🛣️</span><h3>Pomoc drogowa</h3><p>Interwencja na miejscu awarii – szybko i sprawnie.</p></div>
+      <div class="card"><span class="card-icon">🕐</span><h3>Dostępni 24/7</h3><p>Działamy całą dobę, przez cały rok.</p></div>
     </div>
   </div>
 </section>
 
-<!-- GALERIA -->
 <div class="section-bg">
   <section id="galeria">
     <div class="section">
       <h2 class="section-title">Nasza <span>Galeria</span></h2>
       <p class="section-sub">Nasze pojazdy i realizacje</p>
       <div class="gallery-grid">
-
-        <div class="gallery-item">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Tow_truck_transporting_a_car.jpg/800px-Tow_truck_transporting_a_car.jpg" alt="Laweta z samochodem" loading="lazy">
-          <div class="gallery-caption">Transport lawetą</div>
-        </div>
-
-        <div class="gallery-item">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/A_tow_truck_in_Dhaka.jpg/800px-A_tow_truck_in_Dhaka.jpg" alt="Holowanie pojazdu" loading="lazy">
-          <div class="gallery-caption">Holowanie pojazdu</div>
-        </div>
-
-        <div class="gallery-item">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Camion_de_remorquage.jpg/800px-Camion_de_remorquage.jpg" alt="Laweta pomoc drogowa" loading="lazy">
-          <div class="gallery-caption">Pomoc drogowa</div>
-        </div>
-
+        <div class="gallery-item"><img src="https://images.unsplash.com/photo-1578132840654-e67c82498260?auto=format&fit=crop&w=800&q=80" alt="Laweta"><div class="gallery-caption">Transport</div></div>
+        <div class="gallery-item"><img src="https://images.unsplash.com/photo-1621905251918-48416bd8575a?auto=format&fit=crop&w=800&q=80" alt="Holowanie"><div class="gallery-caption">Pomoc</div></div>
+        <div class="gallery-item"><img src="https://images.unsplash.com/photo-1599420186946-7b6fb4e297f0?auto=format&fit=crop&w=800&q=80" alt="Wypadek"><div class="gallery-caption">Interwencja</div></div>
       </div>
+      <p style="text-align:center;margin-top:2rem;color:#9ca3af">Więcej zdjęć na <a href="https://www.facebook.com/p/Auto-Pomoc-Laweta-Pozna%C5%84-100063618518445/" target="_blank" style="color:var(--yellow)">Facebooku</a></p>
+    </div>
+  </section>
+</div>
 
-      <p style="text-align:center;margin-top:1.5rem;color:#9ca3af;font-size:.9rem">
-        Więcej zdjęć znajdziesz na naszym
-        <a href="https://www.facebook.com/p/Auto-Pomoc-Laweta-Pozna%C5%84-100063618518445/" target="_blank" style="color:var(--yellow);text-decoration:none;
+<section id="kontakt">
+  <div class="section">
+    <h2 class="section-title">Skontaktuj się <span>z nami</span></h2>
+    <p class="section-sub">Jesteśmy dostępni pod telefonem 24/7</p>
+    <div class="contact-grid">
+      <div class="contact-card"><div class="contact-icon">📞</div><div class="contact-info"><h4>Telefon 24/7</h4><a href="tel:784311112">784 311 112</a></div></div>
+      <div class="contact-card"><div class="contact-icon">📧</div><div class="contact-info"><h4>Email</h4><a href="mailto:biuro@autokasztrans.pl">biuro@autokasztrans.pl</a></div></div>
+      <div class="contact-card"><div class="contact-icon">📍</div><div class="contact-info"><h4>Obszar</h4><p>Poznań i okolice</p></div></div>
+    </div>
+    <div class="map-wrap">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m131.644342542713!2d16.9251681!3d52.406374!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470444d702151601%3A0x67394d216d252f44!2zUG96bmHFhQ!5e0!3m2!1spl!2spl!4v1700000000000"></iframe>
+    </div>
+    <div class="fb-box">
+      <p>Bądź na bieżąco z naszymi realizacjami!</p>
+      <a href="https://www.facebook.com/p/Auto-Pomoc-Laweta-Pozna%C5%84-100063618518445/" target="_blank">Obserwuj nas na Facebooku</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>&copy; 2026 Auto Pomoc Laweta Poznań. <a href="http://autokasztrans.pl">autokasztrans.pl</a></p>
+</footer>
+
+</body>
+</html>
